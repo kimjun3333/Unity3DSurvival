@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 2946380587283062174}
   - component: {fileID: 1480446781262831907}
   - component: {fileID: 5760266718530212226}
+  - component: {fileID: 2147591640648817261}
   m_Layer: 5
   m_Name: StatusUI
   m_TagString: Untagged
@@ -246,6 +247,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: 5}
   m_UseGraphicAlpha: 1
+--- !u!114 &2147591640648817261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717981616254174711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ebd543c459d3644a509e3847b01df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerType: 2
+  uiType: 0
 --- !u!1 &6993275768525956674
 GameObject:
   m_ObjectHideFlags: 0
