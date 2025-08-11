@@ -13,7 +13,19 @@ public class CheckUIList //√ﬂ∞°µ» UI √º≈©øÎ
 }
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance = null;
+    private static UIManager _instance;
+    public static UIManager Instance
+    {
+        get
+        {
+            if( _instance == null )
+            {
+                _instance = new GameObject("UIManager").AddComponent<UIManager>();
+            }
+            return _instance;
+        }
+    }
+
 
     [Header("UI Position")]
     public Transform topArea;
@@ -27,9 +39,10 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null) //ΩÃ±€≈Ê
+        if(_instance == null) //ΩÃ±€≈Ê
         {
-            Instance = this;
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         LoadUIPrefabFromResources();
