@@ -12,5 +12,6 @@ public enum LayerType // UI 위치
 public enum UIType // UI 타입
 {
     Status,
-    Info
+    Info,
+    DamageIndicator
 }

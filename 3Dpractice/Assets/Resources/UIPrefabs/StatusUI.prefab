@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6961105527073053607}
   - component: {fileID: 2658714299726706971}
   - component: {fileID: 350755058243890498}
+  - component: {fileID: 3175699889876040247}
   m_Layer: 5
-  m_Name: Extra
+  m_Name: Hunger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,16 +68,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 8233ca9632d6819449695ec05a6c6604, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3175699889876040247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354451243073130008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d2de6e5a22fa547bf37664497f9a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  startValue: 100
+  maxValue: 100
+  passiveValue: 3
+  uiBar: {fileID: 350755058243890498}
 --- !u!1 &1513041673020111444
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +106,7 @@ GameObject:
   - component: {fileID: 2309497069387567931}
   - component: {fileID: 4687514911917694165}
   - component: {fileID: 5990556311249851757}
+  - component: {fileID: 814030659916622108}
   m_Layer: 5
   m_Name: Stamina
   m_TagString: Untagged
@@ -144,16 +163,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 8233ca9632d6819449695ec05a6c6604, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &814030659916622108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513041673020111444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d2de6e5a22fa547bf37664497f9a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  startValue: 100
+  maxValue: 100
+  passiveValue: 0
+  uiBar: {fileID: 5990556311249851757}
 --- !u!1 &3032042453739668072
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +277,7 @@ GameObject:
   - component: {fileID: 2946380587283062174}
   - component: {fileID: 1480446781262831907}
   - component: {fileID: 5760266718530212226}
-  - component: {fileID: 2147591640648817261}
+  - component: {fileID: 8537561493455329507}
   m_Layer: 5
   m_Name: StatusUI
   m_TagString: Untagged
@@ -324,7 +360,7 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: 5}
   m_UseGraphicAlpha: 1
---- !u!114 &2147591640648817261
+--- !u!114 &8537561493455329507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,11 +369,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6717981616254174711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6ebd543c459d3644a509e3847b01df7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7baefe478d3a0e445bcda93216c299da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layerType: 0
   uiType: 0
+  health: {fileID: 3211073887919680672}
+  stamina: {fileID: 814030659916622108}
+  hunger: {fileID: 3175699889876040247}
 --- !u!1 &6855841146913123228
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +673,7 @@ GameObject:
   - component: {fileID: 5196683709552212447}
   - component: {fileID: 1539476930157640972}
   m_Layer: 5
-  m_Name: ExtraText
+  m_Name: HungerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,6 +940,7 @@ GameObject:
   - component: {fileID: 2116499667236761747}
   - component: {fileID: 7721190397835918273}
   - component: {fileID: 9051082097999422910}
+  - component: {fileID: 3211073887919680672}
   m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
@@ -957,13 +997,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 8233ca9632d6819449695ec05a6c6604, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3211073887919680672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784344430527444752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d2de6e5a22fa547bf37664497f9a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  startValue: 100
+  maxValue: 100
+  passiveValue: 0
+  uiBar: {fileID: 9051082097999422910}
