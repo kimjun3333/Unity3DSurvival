@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float lookSensitivity;
     private Vector2 mouseDelta;
     public bool canLook = true;
+    public bool camera3DPos = false; 
 
     public Action inventory; //µ®∏Æ∞‘¿Ã∆Æ
     private Rigidbody _rigidbody;
@@ -98,6 +99,23 @@ public class PlayerController : MonoBehaviour
         {
             inventory?.Invoke();
             ToggleCursor();
+        }
+    }
+
+    public void OnChanageCameraPosition(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            if(!camera3DPos)
+            {
+                cameraContainer.localPosition = new Vector3(0, 3, -3);
+                camera3DPos = true;
+            }
+            else
+            {
+                cameraContainer.localPosition = Vector3.zero;
+                camera3DPos = false;
+            }
         }
     }
 
