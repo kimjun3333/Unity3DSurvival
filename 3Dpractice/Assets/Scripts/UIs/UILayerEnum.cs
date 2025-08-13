@@ -13,5 +13,6 @@ public enum UIType // UI е╦ют
 {
     Status,
     Info,
-    DamageIndicator
+    DamageIndicator,
+    Inventory
 }
