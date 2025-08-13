@@ -43,7 +43,6 @@ public class PlayerCondition : MonoBehaviour, IDamagable
     {
         hunger.Add(amount);
     }
-
     public void Die()
     {
         Debug.Log("Á×À½");
